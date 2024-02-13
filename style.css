@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=BenchNine&family=Courier+Prime:wght@400;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1f242d;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.text {
+  position: absolute;
+  color: white;
+  font-size: 60px;
+  font-weight: 900;
+  display: flex;
+}
+.text p:nth-child(2) {
+  animation: shift 1s forwards linear
+}
+
+.circle img {
+  max-width: 50px;
+  transform-origin: center;
+  animation: rotate-back 35s infinite linear; 
+ }
+
+.circle {
+  border: dashed 2px white;
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  animation: rotate 35s infinite linear; 
+}  
+
+.circle .img-wrapper {
+  width: 50px;
+  height: 50px;
+}
+
+.circle .img-wrapper:nth-child(1) {
+  transform: translatex(150%) translatey(60%);
+}
+.circle .img-wrapper:nth-child(2) {
+  transform:  translatex(-40%) translatey(400%);
+}
+.circle .img-wrapper:nth-child(3) {
+  transform:  translatex(220%) translatey(700%);
+}
+.circle .img-wrapper:nth-child(4) {
+  transform: translatex(700%) translatey(580%);
+}
+.circle .img-wrapper:nth-child(5) {
+  transform: translatex(950%) translatey(100%);
+}
+.circle .img-wrapper:nth-child(6) {
+  transform: translatex(720%) translatey(-470%);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-back {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes shift {
+  0% {
+    transform: translatex(-35%)
+  }
+  100% {
+    transform: translatex(0)
+  }
+}
